@@ -45,8 +45,8 @@
                 </div>
 
                 <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.linkedin.com/in/kin-hang-ho-228b2936/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/kinhangho" class="home__social-icon"><i class='bx bxl-github' ></i></a>
                 </div>
 
                 <div class="home__img">
@@ -96,7 +96,7 @@
                             </div>
                             <div>
                                 <span class="skills__percentage">95%</span>
-                            </div>''
+                            </div>
                         </div>
                         <div class="skills__data">
                             <div class="skills__names">
@@ -198,6 +198,17 @@
 
             <div class="work-details">
                 <article>
+                    <h2>Task Manager</h2>
+                <p>Task Manager</p>
+                    <img src="assets/img/Task Manager.png" alt="Project Image">
+                    <p>GitHub Repository: <a href="https://github.com/kinhangho/task-manager-app.git" target="_blank">Go To GitHub</a></p>
+                    <p>Live: <a href="https://task-manager-app-rosy.vercel.app/" target="_blank">Go Live</a></p>
+                </article>
+            </div>
+
+
+            <div class="work-details">
+                <article>
                     <h2>Appointment Planner</h2>
                     <p>Create your contact and make appointment</p>
                     <img src="assets/img/Appointment.png" alt="Project Image">
@@ -255,11 +266,11 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enter" class="contact__button button">
+                    <form action="" class="contact__form" id="contact-form">
+                        <input type="text" placeholder="Name" class="contact__input" id="name">
+                        <input type="email" placeholder="Email" class="contact__input" id="email">
+                        <textarea name="message" placeholder="Message" cols="30" rows="10" class="contact__input" id="message"></textarea>
+                        <input type="submit" value="Submit" class="contact__button button">
                     </form>
                 </div>
             </section>
@@ -269,13 +280,32 @@
         <footer class="footer">
             <p class="footer__title">KinHO</p>
             <div class="footer__social">
-                <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/kin-hang-ho-228b2936/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/kinhangho" class="home__social-icon"><i class='bx bxl-github' ></i></a>
             </div>
             <p class="footer__copy">&#169; Kincode. All rigths reserved</p>
         </footer>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("contact-form");
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault(); // Prevent the form from submitting as usual
+    
+                    // Get the values entered by the user
+                    const name = document.getElementById("name").value;
+                    const email = document.getElementById("email").value;
+                    const message = document.getElementById("message").value;
+    
+                     const submissionMessage = "Submission is currently unavailable. Please email to ho.kin.hang1124@gmail.com.Thank you";
+                     alert(submissionMessage);
 
+                    // For this example, we'll just display an alert with the submitted data
+                    //alert(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+ 
+                });
+            });
+        </script>
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
 
